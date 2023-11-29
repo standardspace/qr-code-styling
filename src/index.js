@@ -19,7 +19,7 @@ const qrCode = new QrCodeStyling({
     image: defaultImage,
     imageOptions: {
         margin: 0,
-        imageSize: '1'
+        imageSize: '0.5'
     }
 });
 
