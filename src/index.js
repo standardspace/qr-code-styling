@@ -2,7 +2,7 @@ import QrCodeStyling from "qr-code-styling";
 import "./index.css";
 import NodesBinder from "./js/nodes-binder";
 import { getSrcFromFile } from "./js/tools";
-import defaultImage from "./assets/logo.png";
+import defaultImage from "./assets/uos-icon.png";
 
 const form = document.getElementById("form");
 const descriptionContainer = document.getElementById("qr-description");
@@ -17,6 +17,10 @@ delete initState.dotsOptions.gradient;
 const qrCode = new QrCodeStyling({
     ...initState,
     image: defaultImage,
+    imageOptions: {
+        margin: 0,
+        imageSize: '1'
+    }
 });
 
 function updateDescriptionContainerBackground(backgroundColor, qrColor) {
@@ -586,7 +590,7 @@ document.getElementById("button-clear-corners-dot-color").onclick = () => {
 
 document.getElementById("qr-download").onclick = () => {
     const extension = document.getElementById("qr-extension").value;
-    qrCode.download({ extension, name: "qr-code-styling" });
+    qrCode.download({ extension, name: "uos-qr-code" });
 };
 
 //Download options
